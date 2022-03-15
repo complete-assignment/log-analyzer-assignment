@@ -50,7 +50,7 @@ The longest event is `scsmbstgrc` (`1491377495218 - 1491377495210 = 8ms`).
 
 ## Solution:
 
-- git clone https://github.com/njain51/log-analyzer-assignment.git
+- git clone https://github.com/sample-projects-only/log-analyzer-assignment.git
 - import via intellij IDE
 - provide `logtext.txt` as arguments
 ![img.png](img.png)
