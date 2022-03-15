@@ -50,3 +50,29 @@ The longest event is `scsmbstgrc` (`1491377495218 - 1491377495210 = 8ms`).
 
 ## Solution:
 
+- git clone https://github.com/njain51/log-analyzer-assignment.git
+- import via intellij IDE
+- provide `logtext.txt` as arguments
+![img.png](img.png)
+
+- run application via console. 
+- console logs:
+
+```text
+2022-03-15 01:02:22.408  INFO 19872 --- [           main] c.n.assignment.LogAnalyzerApplication    : Started LogAnalyzerApplication in 2.985 seconds (JVM running for 3.615)
+2022-03-15 01:02:22.408  INFO 19872 --- [           main] c.n.a.validator.LogAnalyserValidator     : Validating the input...
+2022-03-15 01:02:22.408  INFO 19872 --- [           main] c.n.a.validator.LogAnalyserValidator     : Log file specified for LogAnalyserService: logtext.txt
+2022-03-15 01:02:22.408  INFO 19872 --- [           main] c.n.a.manager.LogAnalyserManager         : Parsing the events and persisting the alerts. This may take a while...
+Hibernate: select alert0_.id as id1_0_0_, alert0_.alert as alert2_0_0_, alert0_.duration as duration3_0_0_, alert0_.host as host4_0_0_, alert0_.type as type5_0_0_ from alerts alert0_ where alert0_.id=?
+Hibernate: insert into alerts (alert, duration, host, type, id) values (?, ?, ?, ?, ?)
+Hibernate: select alert0_.id as id1_0_0_, alert0_.alert as alert2_0_0_, alert0_.duration as duration3_0_0_, alert0_.host as host4_0_0_, alert0_.type as type5_0_0_ from alerts alert0_ where alert0_.id=?
+Hibernate: insert into alerts (alert, duration, host, type, id) values (?, ?, ?, ?, ?)
+Hibernate: select alert0_.id as id1_0_0_, alert0_.alert as alert2_0_0_, alert0_.duration as duration3_0_0_, alert0_.host as host4_0_0_, alert0_.type as type5_0_0_ from alerts alert0_ where alert0_.id=?
+Hibernate: insert into alerts (alert, duration, host, type, id) values (?, ?, ?, ?, ?)
+2022-03-15 01:02:22.549  INFO 19872 --- [           main] c.n.assignment.LogAnalyzerApplication    : Total time: 141ms
+```
+
+- database output - http://localhost:8085/h2-console
+- connection string:
+- ![img_2.png](img_2.png)
+- ![img_1.png](img_1.png)
